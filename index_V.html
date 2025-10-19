@@ -53,45 +53,63 @@
         <!-- # site header 
         ================================================== -->
         <header class="s-header">
-            <div class="row s-header__inner"  style="background-color: rgba(0,0,0,0.5) !important;">
+            <div class="row s-header__inner"
+                style="background-color: rgba(0,0,0,0.5) !important; display:flex; align-items:center; justify-content:space-between;">
 
-                <div class="s-header__block">
-                    <div class="s-header__logo">
-                        <a class="logo" href="index_V.html">
-                            <span class="logo-text"
-                                style="display:inline-block;font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-weight:700;font-size:6rem;letter-spacing:0.08em;text-transform:uppercase;color:#fffcfc!important;transition:none!important;-webkit-font-smoothing:antialiased;">A6UNDER</span>
-                            <img src="logo.png" alt="Homepage">
-                        </a>
-                    </div>
+                <!-- Logo -->
+                <div class="s-header__logo" style="flex:1; display:flex; align-items:center;">
+                    <a class="logo" href="index.html" style="text-decoration:none;">
+                        <span class="logo-text"
+                            style="display:inline-block;font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:6rem;letter-spacing:0.08em;text-transform:uppercase;color:#fffcfc!important;transition:none!important;-webkit-font-smoothing:antialiased;">
+                            A6UNDER
+                        </span>
+                    </a>
+                </div>
 
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-                </div> <!-- end s-header__block -->
+                <!-- Navigation -->
+                <nav class="s-header__nav" style="flex:2; display:flex; justify-content:center; align-items:center;">
+                    <ul class="s-header__menu-links"
+                        style="display:flex; align-items:center; gap:30px; list-style:none; margin:0; padding:0;">
+                        <li class="current"><a class="smoothscroll" href="#intro"
+                                style="color:#fff; text-decoration:none;">Intro</a></li>
+                        <li><a class="smoothscroll" href="#about" style="color:#fff; text-decoration:none;">About</a>
+                        </li>
+                        <li><a class="smoothscroll" href="#works" style="color:#fff; text-decoration:none;">Pictures</a>
+                        </li>
 
-                <nav class="s-header__nav">
-                    <ul class="s-header__menu-links">
-                        <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-                        <li><a class="smoothscroll" href="#about">About</a></li>
-                        <li><a class="smoothscroll" href="#works">Pictures</a></li>
-                    </ul> <!-- s-header__menu-links -->
-                </nav> <!-- end s-header__nav -->
-                <div class="s-header__tools" style="margin-left:auto; position:relative; display:flex; align-items:center;">
-                    <button id="headerDropdownBtn" class="s-header__dropdown-btn" aria-expanded="false" aria-controls="headerDropdown"
-                        onclick="(function(btn){var menu=document.getElementById('headerDropdown'); var open = menu.style.display==='block'; menu.style.display = open ? 'none' : 'block'; btn.setAttribute('aria-expanded', String(!open));})(this)"
-                        style="background:#111;color:#fff;border:0;padding:8px 12px;border-radius:4px;cursor:pointer;">
-                        Who? ▾
-                    </button>
+                        <!-- Dropdown integrated inside menu -->
+                        <li class="s-header__menu-dropdown" style="position:relative;">
+                            <button id="headerDropdownBtn" class="s-header__dropdown-btn" aria-expanded="false"
+                                aria-controls="headerDropdown"
+                                onclick="(function(btn){var menu=document.getElementById('headerDropdown'); var open = menu.style.display==='block'; menu.style.display = open ? 'none' : 'block'; btn.setAttribute('aria-expanded', String(!open));})(this)"
+                                style="background:none;color:#fff;border:0;padding:8px 12px;cursor:pointer;font-size:1rem;">
+                                Who? ▾
+                            </button>
 
-                    <ul id="headerDropdown" class="s-header__dropdown" role="menu"
-                        style="display:none; position:absolute; right:16px; top:48px; background:#fff; color:#111; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,0.12); padding:6px 0; list-style:none; min-width:160px; z-index:9999;">
-                        <li role="none" style="padding:0;"><a role="menuitem" href="index.html" style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Giang</a></li>
-                        <li role="none" style="padding:0;"><a role="menuitem" href="index_V.html" style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Vy</a></li>
-                        <li role="none" style="padding:0;"><a role="menuitem" href="index_H.html" style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Hà</a></li>
-                        <li role="none" style="padding:0;"><a role="menuitem" href="index_T.html" style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Trang</a></li>
-                        <li role="none" style="padding:0;"><a role="menuitem" href="index_L.html" style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Ly</a></li>
+                            <ul id="headerDropdown" class="s-header__dropdown" role="menu"
+                                style="display:none; position:absolute; top:40px; left:0; background:#fff; color:#111; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,0.12); padding:6px 0; list-style:none; min-width:160px; z-index:9999;">
+                                <li><a href="index.html"
+                                        style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Giang</a>
+                                </li>
+                                <li><a href="index_V.html"
+                                        style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Vy</a>
+                                </li>
+                                <li><a href="index_H.html"
+                                        style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Hà</a>
+                                </li>
+                                <li><a href="index_T.html"
+                                        style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Trang</a>
+                                </li>
+                                <li><a href="index_L.html"
+                                        style="display:block;padding:8px 14px;color:inherit;text-decoration:none;">Ly</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                </div> <!-- end s-header__tools -->
+                </nav>
+
             </div> <!-- end s-header__inner -->
-        </header> <!-- end s-header -->
+        </header>
 
 
         <!-- # intro
